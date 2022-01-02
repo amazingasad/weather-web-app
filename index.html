@@ -10,10 +10,40 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap.min.css">
     <style>
+        body{
+            scroll-behavior: smooth;
+        }
         body {
             background: url(images/bg-image.jpg) no-repeat;
             background-size: cover;
-            height: 100vh;
+            height: 100%;
+        }
+        .also{
+            margin: 8rem 0 2rem 0;
+            color: white;
+            text-align: center;
+        }
+        .social-links{
+            display: flex;
+            justify-content: center;
+        }
+        .social-links img{
+            width: 3rem;
+            margin: 1rem;
+        }
+        footer{
+            text-align: center;
+            color: white;
+            z-index: 100;
+        }
+        footer a{
+            text-decoration: none;
+            color: snow;
+        }
+        footer a:hover{
+            letter-spacing: 4px;
+            color: salmon;
+            transition: 0.5s;
         }
     </style>
 </head>
@@ -29,13 +59,35 @@
             </div>
         </form>
         <div class="weather-status text-white text-center">
-            <!-- <img src="https://openweathermap.org/img/wn/02d@2x.png" alt=""> -->
+            <div id="image"></div>
             <h1 id="city-name"></h1>
-            <h3><span id="temperature"></span>&deg;C</h3>
+            <h3>Current Temperature <span id="temperature"></span>&deg;C</h3>
+            <h1 class="lead">Minimum Temperature <span id="min-temp"></span> &deg; C</h1>
+            <h1 class="lead">Maximum Temperature <span id="max-temp"></span> &deg; C</h1>
             <h1 class="lead" id="weather-condition">Clouds</h1>
-            <h1 class="lead"><span id="atmospheric-pressure"></span> Pascal</h1>
+            <h1 class="lead">Atmospheric Pressure <span id="atmospheric-pressure"></span> Pascal</h1>
         </div>
     </div>
+    <div class="also">
+        <h4>Follow me on</h4>
+        <div class="social-links">
+            <a href="https://www.facebook.com/amazing.asad.124" target="_blank">
+                <img src="icon/Facebook.svg" alt="">
+            </a>
+            <a href="https://www.instagram.com/amazing.asad" target="_blank">
+                <img src="icon/Instagram.svg" alt="">
+            </a>
+            <a href="https://www.twitter.com/amazingasad124" target="_blank">
+                <img src="icon/Twitter.svg" alt="">
+            </a>
+            <a href="https://www.github.com/amazingasad" target="_blank">
+                <img src="icon/Github.svg" alt="">
+            </a>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright by <a href="https://www.twitter.com/amazingasad124" target="_blank">Asad Islam </a>, 2022</p>
+    </footer>
     <script src="app.js"></script>
 
 </body>
