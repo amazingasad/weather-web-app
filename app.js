@@ -14,7 +14,7 @@ function weatherCheck(){
     fetch(url)
     .then(res => res.json())
     .then(data => {
-      if(inputField.value != data.name){
+      if(data.name == undefined){
   alert ("Enter a Valid Location name or check your spelling");
 }
         cityName.innerText = data.name;
