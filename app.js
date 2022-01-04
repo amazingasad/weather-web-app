@@ -16,7 +16,7 @@ function weatherCheck(){
     .then(data => {
       if(data.name == undefined){
   alert ("Enter a Valid Location name or check your spelling");
-}
+} else{
         cityName.innerText = data.name;
         temperature.innerText = Math.round(data.main.temp);
         img.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
@@ -25,6 +25,7 @@ function weatherCheck(){
         maximumTemperature.innerText = Math.ceil(data.main.temp_max);
         pressure.innerText = data.main.pressure;
         console.log(data);
+}
     })
 }
 button.addEventListener('click', weatherCheck);
